@@ -2,6 +2,8 @@
 
 - Create React App;
 
+- Configure airbnb style guide, vscode, eslint and prettier;
+
 - Configure the Material-UI;
 
 - Create Todo React Functional Component;
