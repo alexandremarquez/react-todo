@@ -52,6 +52,8 @@ function Todo() {
       ...prevState,
       [randomkey]: editTask,
     }));
+
+    setEditTask('');
   }
 
   function handleChange(e) {
@@ -69,6 +71,7 @@ function Todo() {
           variant="outlined"
           color="secondary"
           margin="dense"
+          value={editTask}
           onChange={handleChange}
         />
         <Button
