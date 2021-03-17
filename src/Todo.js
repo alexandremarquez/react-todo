@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(2),
   },
   list: {
-    marginTop: theme.spacing(5),
+    marginTop: theme.spacing(1),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'start',
