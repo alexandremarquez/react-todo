@@ -2,7 +2,8 @@ import React from 'react';
 import {
   Typography,
   TextField,
-  Button, List,
+  Button,
+  List,
   ListItem,
   Checkbox,
   ListItemText,
@@ -10,7 +11,7 @@ import {
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     margin: theme.spacing(5),
     display: 'flex',
@@ -47,7 +48,7 @@ function Todo() {
     e.preventDefault();
     const randomkey = Math.floor(Math.random() * Date.now());
 
-    setTasks((prevState) => ({
+    setTasks(prevState => ({
       ...prevState,
       [randomkey]: editTask,
     }));
@@ -60,12 +61,7 @@ function Todo() {
 
   return (
     <div className={classes.root}>
-
-      <Typography
-        variant="h4"
-      >
-        React Todo
-      </Typography>
+      <Typography variant="h4">React Todo</Typography>
       <div className={classes.form}>
         <TextField
           id="outlined-secondary"
@@ -85,25 +81,19 @@ function Todo() {
         >
           Add
         </Button>
-
       </div>
       <div className={classes.list}>
         <Typography variant="h6">Tasks</Typography>
         <List>
-          {Object.keys(tasks).map((key) => (
+          {Object.keys(tasks).map(key => (
             <ListItem key={key}>
               <ListItemIcon>
-                <Checkbox
-                  edge="start"
-                  tabIndex={-1}
-                  disableRipple
-                />
+                <Checkbox edge="start" tabIndex={-1} disableRipple />
               </ListItemIcon>
               <ListItemText primary={tasks[key]} />
             </ListItem>
           ))}
         </List>
-
       </div>
     </div>
   );

@@ -1,13 +1,13 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { CssBaseline, Container } from '@material-ui/core';
 import Todo from './Todo';
 
 function App() {
   return (
-    <>
+    <Container maxWidth="sm">
       <CssBaseline />
       <Todo />
-    </>
+    </Container>
   );
 }
 
